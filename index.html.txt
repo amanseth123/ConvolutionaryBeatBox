@@ -1,0 +1,63 @@
+<head>
+   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2096725/audio_classification.js"></script> 
+   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2096725/onset.js"></script> 
+   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2096725/nt-utils.js"></script> 
+</head>
+<body>
+   <div id="initialization">
+      <div class="progress">
+         <div class="indeterminate"></div>
+      </div>   
+      Loading models...
+   </div>
+
+   <div id='info'>
+      <h2>Rhythm Beatbox</h2>
+
+      <h5>Make some noise and record your voice! <br>
+         Deep Learning models will analyze and build a drum kit, then start generating drum patterns infinitely with your sound.</h5> 
+
+      <p id="warning"></p>
+   </div>
+
+   <!--  RECORDING   -->
+   <button  id="record_button" disabled>1. Record</button>
+   <div class="progress" id="progressbar-record"  style="width:0%"></div>
+   <div id="ws-waveform"><div id="ws-waveform-text"></div></div>
+   <div id="ws-spectorogram"></div>
+
+
+   <!--  CLASSIFICATION    -->
+   <button  id="classify_button" disabled>2. Analyze</button> 
+   <div class="progress" id="progressbar-analysis" style="display:none">
+      <div class="indeterminate"></div>
+   </div>
+
+   <div class="grid-container">
+      <div class="grid-item" id="ws-waveform-kit-0">Kick </div>
+      <div class="grid-item" id="ws-waveform-kit-1">Snare</div>
+      <div class="grid-item" id="ws-waveform-kit-2">Hi-hat closed</div>
+      <div class="grid-item" id="ws-waveform-kit-3">Hi-hat open</div>
+      <div class="grid-item" id="ws-waveform-kit-4">Tom low</div>
+      <div class="grid-item" id="ws-waveform-kit-5">Tom mid</div>
+      <div class="grid-item" id="ws-waveform-kit-6">Tom high</div>
+      <div class="grid-item" id="ws-waveform-kit-7">Clap</div>
+      <div class="grid-item" id="ws-waveform-kit-8">Rim</div>
+   </div>
+   <p>
+
+      <button id="play_button" disabled>3. Play!!</button>
+
+
+   <div id='info'>    
+      <h3>How does it work?</h3>
+
+      Convolutional Neural Network is used to analyze and classify audio segments based on spectrograms <a target="_"></a> and Recurrent Neural Network(LSTM) for generating drum sequences.   
+      <p><a href="github.com/amanseth123" target="_"></a><br>
+   </div>
+
+   <div id='info'>    
+    
+   </div>
+
+</body>
