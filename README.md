@@ -1,0 +1,2 @@
+# ConvolutionaryBeatBox
+This is an experimental drum machine powered by a deep neural network. To use it, define a seed pattern on the left, and use the “generate” button. A neural network will dream up a continuation to your seed pattern. Using the Drums RNN (pretrained !!!) model from Google Magenta, and Magenta.js + TensorFlow.js it could generate music beats ,and also capable of classifying them into different sectors as well.This is also made using Web technologies like HTML5,CSS,Javascript with its all ML Libraries as well as mentioned above !! 
